@@ -10,6 +10,7 @@ endif()
 
 # Chapters
 
+
 file(GLOB chapter_folders chap-*)
 
 foreach(chapter ${chapter_folders})
@@ -19,6 +20,7 @@ endforeach()
 # TPs
 
 file(GLOB tp_folders tp-*)
+
 
 foreach(tp ${tp_folders})
     add_subdirectory(${tp})

@@ -1,0 +1,35 @@
+Exercice 1
+1. L'avantage d'un langage compilé est qu'il est plus rapide à l'execution (car il est déjà compilé)
+le désavantage est qu'il faut le recompiler pour chaque systeme.
+
+2. Comme son nom l'indique, une erreur de compilation a lieu pendant la compilation et est dû à des problème de type, signature etc...,
+et une erreur d'execution pendant l'execution et est dû à une erreur de valeur, comme acceder à un tableau en dehors de sa taille etc..
+
+
+3. ???????????
+
+Exercice 2
+1.
+    const short s1; car il faut initialiser les variables "const" car on ne peut pas les modifier dans la suite
+    bool b3{i1}; car i2 faut 2 et ça n'a pas de sens pour un bool
+    char c8{"a"}; car "a" est un const char * et pas un char, il faut utiliser un 'a'
+    double& d12; car une reference doit être initialiser
+    int& i15 = i1; car on ne peut pas faire une reference d'un const int à int& (car sinon, on pourrait modifier int& alors qu'elle refere à un const int)
+    int& i16 = b2; car b2 est un bool, et si la reference marcherait on pourrait modifier i16 en une valeur > 1 qui n'a pas de sens pour un bool
+
+2.
+    s0 = 0
+    s1 ne compile pas 
+    i1 = 2
+    b2 = false
+    b3 ne compile pas car i1 > 1
+    b4 = false
+    u5 = 16
+    us6 = 246 (car c'est un unsigned short donc pas de negatif)
+    ul7 ne compile pas car utilise b3
+
+Exercice 3.
+2.
+Par valeur : la valeur est copier (peut couter cher)
+Par reference : Passe l'adresse directement (donc on peut modifier le modifier)
+Par reference constante : Passe l'adresse mais on ne peut pas le modifier
