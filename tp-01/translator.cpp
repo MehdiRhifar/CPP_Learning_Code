@@ -6,14 +6,14 @@
 
 using namespace std;
 
-bool parse_params(int argc, char** argv, string& dict_path, string& word, string& translation,
+bool parse_params(int argc, char* argv[], string& dict_path, string& word, string& translation,
                   vector<string>& sentence);
 
 vector<pair<string, string>> open_dictionary(const string& path);
 void                         save_dictionary(const string& path, vector<pair<string, string>> dict);
 void                         translate(vector<string>& sentence, vector<pair<string, string>> dict);
 
-int main(int argc, char** argv)
+int main(int argc, char* argv[])
 {
     string         dict_path, word, translation;
     vector<string> sentence;
