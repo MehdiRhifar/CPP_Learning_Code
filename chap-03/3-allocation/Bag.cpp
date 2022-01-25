@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 #include <string>
 #include <vector>
 
@@ -11,13 +12,26 @@ struct Content
     std::string name;
 };
 
+// class Bag
+// {
+// public:
+//     Content& add(const std::string& name) { return _contents.emplace_back(name); }
+
+// private:
+//     std::vector<Content> _contents;
+// };
+
 class Bag
 {
 public:
-    Content& add(const std::string& name) { return _contents.emplace_back(name); }
+    Content& add(const std::string& name)
+    {
+        std::unique_ptr<Content>& content = _contents.emplace_back(std::make_unique<Content>(name));
+        return *content;
+    }
 
 private:
-    std::vector<Content> _contents;
+    std::vector<std::unique_ptr<Content>> _contents;
 };
 
 int main()
