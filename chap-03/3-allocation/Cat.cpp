@@ -23,15 +23,19 @@ int main()
         test c_test(c);
     }
 
+    std::unique_ptr<Cat> cat_empty = std::make_unique<Cat>(c);
+    std::unique_ptr<Cat> cat2      = std::make_unique<Cat>(c);
+
+    c._name = "test_rename";
+
+    std::cout << *cat_empty << std::endl;
+    std::cout << *cat2 << std::endl;
     std::cout << c << std::endl;
 
-    // std::unique_ptr<Cat> cat_empty;
-
-    // std::unique_ptr<Cat> cat2;
-    // if (cat2 == nullptr)
-    // {
-    //     std::cout << "cat2 is nullptr." << std::endl;
-    // }
+    if (cat2 == nullptr)
+    {
+        std::cout << "cat2 is nullptr." << std::endl;
+    }
 
     // cat2 = std::make_unique<Cat>("Ryuk");
 

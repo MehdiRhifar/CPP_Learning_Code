@@ -18,7 +18,7 @@ public:
     {}
 
     ~Cat() { std::cout << "le chat " << _name << " est détruit !" << std::endl; }
+    std::string _name = "Felix";
 
 private:
-    std::string _name = "Felix";
 };
