@@ -4,6 +4,7 @@
 #include "Trainer.h"
 
 #include <catch2/catch.hpp>
+#include <iostream>
 #include <memory>
 #include <string>
 #include <utility>
@@ -200,5 +201,6 @@ TEST_CASE("A trainer can retrieve their Pokemons from the PC")
 
         REQUIRE(pc.pokemons().size() == 2);
         REQUIRE(sacha_pokeballs[0].empty() == true);
+        std::cout << "test" << std::endl;
     }
 }
