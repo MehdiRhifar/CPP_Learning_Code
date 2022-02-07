@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/askye/Documents/CPP_Learning_Code/chap-05/3-associatives/keys.h
+iostream
+-
+string
+-
+
+/home/askye/Documents/CPP_Learning_Code/chap-05/3-associatives/main.cpp
+keys.h
+/home/askye/Documents/CPP_Learning_Code/chap-05/3-associatives/keys.h
+functional
+-
+iostream
+-
+set
+-
+unordered_set
+-
+

@@ -22,6 +22,11 @@ public:
             std::swap(lower_left.y, upper_right.y);
     }
 
+    std::ostream& print(std::ostream& os) const
+    {
+        return os << "rectangle through " << lower_left << " & " << upper_right;
+    }
+
     bool point_is_inside(const Point& p) const
     {
         return (p.x >= lower_left.x) && (p.x <= upper_right.x) && (p.y >= lower_left.y) &&
@@ -49,6 +54,16 @@ public:
                  LineSegment { lower_left, { upper_right.x, lower_left.y } },
                  LineSegment { upper_right, { upper_right.x, lower_left.y } },
                  LineSegment { lower_left, { lower_left.x, upper_right.y } } };
+    }
+
+    PointContainer intersect(const Line& ln) const
+    {
+        PointContainer result;
+        for (const LineSegment& ls : get_border())
+        {
+            result.merge(ls.intersect(ln));
+        }
+        return result;
     }
 
     PointContainer intersect(const Shape& other) const override

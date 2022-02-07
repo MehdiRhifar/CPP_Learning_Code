@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/c3-3-cat.dir/3-allocation/Cat.cpp.o  -o c3-3-cat 

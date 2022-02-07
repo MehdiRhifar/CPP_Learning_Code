@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/tp3-pokemons.dir/Pokemons/Main.cpp.o CMakeFiles/tp3-pokemons.dir/Pokemons/PC.cpp.o CMakeFiles/tp3-pokemons.dir/Pokemons/Tests.cpp.o  -o tp3-pokemons 

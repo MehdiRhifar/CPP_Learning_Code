@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/askye/Documents/CPP_Learning_Code/chap-05/2-sequentials.cpp
+array
+-
+iostream
+-
+list
+-
+stack
+-
+string
+-
+vector
+-
+

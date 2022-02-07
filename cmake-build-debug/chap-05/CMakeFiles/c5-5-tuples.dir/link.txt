@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/c5-5-tuples.dir/5-tuples.cpp.o  -o c5-5-tuples 

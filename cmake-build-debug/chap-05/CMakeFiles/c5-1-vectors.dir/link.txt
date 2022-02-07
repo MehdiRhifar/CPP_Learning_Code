@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/c5-1-vectors.dir/1-vectors.cpp.o  -o c5-1-vectors 

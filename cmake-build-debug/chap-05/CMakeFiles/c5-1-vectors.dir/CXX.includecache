@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/askye/Documents/CPP_Learning_Code/chap-05/1-vectors.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+

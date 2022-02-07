@@ -18,6 +18,11 @@ public:
         , radius { _radius }
     {}
 
+    std::ostream& print(std::ostream& os) const
+    {
+        return os << "Circle with center " << center << " with radius " << radius;
+    }
+
     // intersection of 2 circles is the intersection of one cicle with the line L "in the middle" such that
     // L intersects the line between the centers of the circles at distances d1 from circle 1 and d2 from
     // circle 2 where r1^2 - d1^2  = r2^2 - d2^2 using d1 + d2 = distance dc between the centers, we get: d1^2
@@ -46,10 +51,13 @@ public:
         return result;
     }
 
+    PointContainer intersect(const Shape& ln) const override { return ln.intersect(*this); }
+
     // to intersect a circle with a line, determine the point on the line that is closest to the center.
     // to this end, form a line L from the circle center in orthogonal direction of the given line and
-    // intersect the two lines if the distance d of this intersection point P to the center is larger than the
-    // radius, they don't intersect; otherwise, they intersect on the points at distance sqrt(radius * radius
+    // intersect the two lines if the distance d of this intersection point P to the center is larger than
+    // the radius, they don't intersect; otherwise, they intersect on the points at distance sqrt(radius *
+    // radius
     // - d * d) on L around P
     PointContainer intersect(const Line& ln) const override
     {

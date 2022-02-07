@@ -4,6 +4,7 @@
 #include "shape.hpp"
 
 #include <cassert>
+#include <iostream>
 
 class Line : public Shape
 {
@@ -15,6 +16,8 @@ public:
         : first { _first }
         , last { _last }
     {}
+
+    std::ostream& print(std::ostream& os) const { return os << "line through " << first << " & " << last; }
 
     Point direction() const { return last - first; }
 
@@ -45,6 +48,8 @@ public:
         }
         return {};
     }
+
+    PointContainer intersect(const Shape& ln) const override { return ln.intersect(*this); }
 
     ~Line() = default;
 };

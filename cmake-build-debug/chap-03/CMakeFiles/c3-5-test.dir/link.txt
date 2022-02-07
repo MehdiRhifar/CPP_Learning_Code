@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/c3-5-test.dir/4-move/test.cpp.o  -o c3-5-test 

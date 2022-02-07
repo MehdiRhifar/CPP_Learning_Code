@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/c5-4-strings.dir/4-strings.cpp.o  -o c5-4-strings 
